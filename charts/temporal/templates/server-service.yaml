@@ -19,6 +19,7 @@ spec:
   ports:
     - port: {{ .Values.server.frontend.service.port }}
       targetPort: rpc
+      appProtocol: tcp
       protocol: TCP
       name: grpc-rpc
       {{- if hasKey .Values.server.frontend.service "nodePort" }}
@@ -63,10 +64,12 @@ spec:
   ports:
     - port: {{ $serviceValues.service.port }}
       targetPort: rpc
+      appProtocol: tcp
       protocol: TCP
       name: grpc-rpc
     - port: 9090
       targetPort: metrics
+      appProtocol: http
       protocol: TCP
       name: metrics
   selector:
