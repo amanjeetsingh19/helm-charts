@@ -198,6 +198,7 @@ server:
       annotations: {} # Evaluated as template
       type: ClusterIP
       port: 7233
+      membershipPort: 6933
     metrics:
       annotations:
         enabled: true
@@ -220,6 +221,7 @@ server:
     service:
       # type: ClusterIP
       port: 7234
+      membershipPort: 6934
     metrics:
       annotations:
         enabled: true
@@ -242,6 +244,7 @@ server:
     service:
       # type: ClusterIP
       port: 7235
+      membershipPort: 6935
     metrics:
       annotations:
         enabled: false
@@ -264,6 +267,7 @@ server:
     service:
       # type: ClusterIP
       port: 7239
+      membershipPort: 6939
     metrics:
       annotations:
         enabled: true

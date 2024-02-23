@@ -67,7 +67,7 @@ spec:
       appProtocol: tcp
       protocol: TCP
       name: grpc-rpc
-    - port: 6933
+    - port: {{ $serviceValues.service.membershipPort }}
       targetPort: membership
       appProtocol: tcp
       protocol: TCP
