@@ -67,6 +67,11 @@ spec:
       appProtocol: tcp
       protocol: TCP
       name: grpc-rpc
+    - port: 6933
+      targetPort: membership
+      appProtocol: tcp
+      protocol: TCP
+      name: grpc-membership
     - port: 9090
       targetPort: metrics
       appProtocol: http
